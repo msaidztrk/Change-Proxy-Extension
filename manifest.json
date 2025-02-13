@@ -3,21 +3,22 @@
     "name": "Dynamic Proxy Switcher",
     "version": "1.0",
     "permissions": [
+        "identity",
+        "storage",
         "proxy",
         "webRequest",
-        "storage",
-        "tabs",
-        "http://bcrain.site/*",
-        "https://api.proxyscrape.com/*"
+        "privacy",
+        "webRequestAuthProvider",
+        "cookies"
+        
     ],
-    "host_permissions": [
-        "http://bcrain.site/*"
-    ],
+    "host_permissions": ["<all_urls>"] ,
     "action": {
         "default_popup": "popup.html",
         "default_icon": "icons/48.png"
     },
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "background.js" ,
+         "type": "module"
     }
 }
